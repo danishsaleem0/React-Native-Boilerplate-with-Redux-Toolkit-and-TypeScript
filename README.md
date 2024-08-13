@@ -16,6 +16,7 @@ Features
 - Session Management: Basic session management to handle user authentication and navigation flow.
 
 # Session Management Example
+```bash
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import * as React from 'react';
@@ -25,7 +26,7 @@ import {navigationRef} from './NavigationRef';
 import BottomTabStack from '../Tabs/BottomTabStack';
 import useAuthSelector from '../../redux/selectors/useAuthSelector';
 
-```bash
+
 export type MainNavigatorStackParamList = {
   [NavigationStrings.AUTH_STACK]: undefined;
   [NavigationStrings.MAIN_STACK]: undefined;
