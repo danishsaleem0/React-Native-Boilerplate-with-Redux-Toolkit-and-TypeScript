@@ -1,5 +1,17 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+# React Native Boilerplate with Redux Toolkit & TypeScript
+
+This boilerplate provides a solid foundation for building React Native applications with Redux Toolkit and TypeScript. It includes essential features and best practices to help you kickstart your project with ease.
+
+Features
+- Redux Toolkit: Simplified state management with Redux Toolkit, including slices, reducers, and async actions using createAsyncThunk.
+- TypeScript Support: Strongly typed codebase for better developer experience and fewer runtime errors.
+- Scalable Structure: Organized folder structure to keep your code clean and maintainable.
+- Error Handling: Centralized error handling with support for network and unauthorized access checks.
+- Built-in Navigation: Pre-configured navigation with React Navigation.
+- API Integration: Example setup for API integration with error handling and response management.
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
