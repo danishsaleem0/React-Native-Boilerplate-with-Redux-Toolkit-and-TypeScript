@@ -4,3 +4,8 @@ export enum TOAST_STATUS {
   ERROR = 'error',
   INFO = 'info',
 }
+
+export enum USER_ROLES {
+  ADMIN = 'admin',
+  OPERATOR = 'operator',
+}

@@ -5,12 +5,61 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 This boilerplate provides a solid foundation for building React Native applications with Redux Toolkit and TypeScript. It includes essential features and best practices to help you kickstart your project with ease.
 
 Features
-- Redux Toolkit: Simplified state management with Redux Toolkit, including slices, reducers, and async actions using createAsyncThunk.
-- TypeScript Support: Strongly typed codebase for better developer experience and fewer runtime errors.
+- Redux Toolkit: Simplified state management with slices, reducers, and async actions using createAsyncThunk.
+- TypeScript Support: Strongly typed codebase for a better developer experience and fewer runtime errors.
 - Scalable Structure: Organized folder structure to keep your code clean and maintainable.
 - Error Handling: Centralized error handling with support for network and unauthorized access checks.
-- Built-in Navigation: Pre-configured navigation with React Navigation.
+- Built-in Navigation: Pre-configured stack and bottom tab navigation with React Navigation.
+- Reusable Components: Example reusable components to promote DRY principles in your codebase.
+- Formik & Yup: Formik with Yup validation setup for sign-in and sign-up screens.
 - API Integration: Example setup for API integration with error handling and response management.
+- Session Management: Basic session management to handle user authentication and navigation flow.
+
+# Session Management Example
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import * as React from 'react';
+import NavigationStrings from '../NavigationStrings';
+import AuthStack from './AuthStack';
+import {navigationRef} from './NavigationRef';
+import BottomTabStack from '../Tabs/BottomTabStack';
+import useAuthSelector from '../../redux/selectors/useAuthSelector';
+
+export type MainNavigatorStackParamList = {
+  [NavigationStrings.AUTH_STACK]: undefined;
+  [NavigationStrings.MAIN_STACK]: undefined;
+};
+
+const Stack = createStackNavigator<MainNavigatorStackParamList>();
+
+export default function MainNavigator() {
+  const {accessToken, isLoggedIn} = useAuthSelector();
+  return (
+    <NavigationContainer ref={navigationRef}>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        {!isLoggedIn && !accessToken ? (
+          <Stack.Screen
+            name={NavigationStrings.AUTH_STACK}
+            component={AuthStack}
+          />
+        ) : (
+          <Stack.Screen
+            name={NavigationStrings.MAIN_STACK}
+            component={BottomTabStack}
+          />
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+This example shows how the app determines the user's login status and directs them either to the authentication flow (AuthStack) or the main app (BottomTabStack).
+
+# Navigation Setup
+The boilerplate includes both stack navigation and bottom tab navigation, which are pre-configured for easy use.
+
+Stack Navigation: Handles the flow between different screens and navigators.
+Bottom Tab Navigation: Provides a tab-based navigation structure for the main app content.
 
 # Getting Started
 

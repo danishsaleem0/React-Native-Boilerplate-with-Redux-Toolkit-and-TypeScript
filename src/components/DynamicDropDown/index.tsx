@@ -20,6 +20,8 @@ export default function DynamicDropDown({
 }: IDynamicDropDown): ReactElement {
   const [isFocus, setIsFocus] = useState<boolean>(false);
 
+  console.log(isError);
+
   return (
     <Fragment>
       <View style={[styles.container, dropdownContainerStyle]}>
@@ -28,8 +30,8 @@ export default function DynamicDropDown({
           style={[
             styles.dropdown,
             isFocus
-              ? {borderColor: COLORS.olive_green, borderWidth: 1}
-              : isError != '' && {borderColor: 'red', borderWidth: 1},
+              ? {borderColor: COLORS.oliveGreen}
+              : isError === true && {borderColor: 'red'},
 
             dropdownStyle,
           ]}
@@ -49,12 +51,14 @@ export default function DynamicDropDown({
           onChange={item => {
             setIsFocus(false);
             if (onChange) {
-              onChange(item);
+              onChange(item?.value);
             }
           }}
         />
       </View>
-      {isError && <Text style={styles.errorText} text={errorText} />}
+      {isError && errorText && (
+        <Text style={styles.errorText} text={errorText} />
+      )}
     </Fragment>
   );
 }

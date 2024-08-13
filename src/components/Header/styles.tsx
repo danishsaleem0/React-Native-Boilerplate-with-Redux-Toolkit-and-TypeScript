@@ -3,13 +3,12 @@ import {COLORS, FONTS, SIZES} from '../../constant';
 
 const styles = StyleSheet.create({
   container: {
-    padding: SIZES.padding2,
+    paddingHorizontal: SIZES.padding2,
+    paddingVertical: SIZES.padding,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: COLORS.background,
-    borderBottomWidth: 0.5,
-    borderColor: COLORS.strokeColor,
+    // backgroundColor: COLORS.red,
   },
 
   titleView: {
@@ -28,11 +27,14 @@ const styles = StyleSheet.create({
     color: COLORS.secondary,
   },
   titleText: {
-    ...FONTS.Bold23,
-    color: COLORS.black,
+    ...FONTS.Bold25,
+    color: COLORS.secondary,
   },
   backBtn: {
-    borderRadius: SIZES.medium,
+    backgroundColor: '#F1F5F9',
+    height: SIZES.padding * 1.7,
+    width: SIZES.padding * 1.7,
+    borderRadius: SIZES.radius * 2,
     alignItems: 'center',
     justifyContent: 'center',
   },

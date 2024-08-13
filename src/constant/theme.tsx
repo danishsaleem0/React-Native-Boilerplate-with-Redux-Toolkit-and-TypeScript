@@ -3,22 +3,24 @@ import {Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 
 export const COLORS = {
-  primary: '#E9F332',
-  secondary: '#3CB779',
-  text_color: '#16232D',
-  secondary_text_color: '#303855',
+  primary: '#1C2434',
+  secondary: '#1E293B',
+  textColor: '#64748B',
   transparent: 'transparent',
-  place_holder_color: 'rgba(31,31,31,0.4)',
+  placeHolderColor: '#989FA9',
+
   black: '#000000',
-  red: '#EE4C44',
+  red: '#D34747',
   grey: 'gray',
-  card_background: '#F6FBF9',
+  cardBackground: '#F6FBF9',
   background: '#FFFFFF',
-  borderColor: '#D9D9D9',
-  strokeColor: '#C6C6C6',
+  borderColor: '#E2E8F0',
+  strokeColor: '#999EA1',
+  iconColor: '#475569',
   shadowColor: 'rgba(35,35,35,0.8)',
   darkShadowColor: 'rgba(35,35,35,0.9)',
-  olive_green: '#A9C23F',
+  oliveGreen: '#A9C23F',
+  disabledColor: '#454648',
 };
 
 export const SIZES = {

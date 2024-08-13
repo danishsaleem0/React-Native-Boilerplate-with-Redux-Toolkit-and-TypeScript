@@ -15,14 +15,14 @@ const styles = StyleSheet.create({
   },
   pickerText: {
     ...FONTS.Regular11,
-    color: COLORS.place_holder_color,
+    color: COLORS.placeHolderColor,
   },
   pickerSelectedText: {
     ...FONTS.Regular11,
     color: COLORS.black,
   },
   errorText: {
-    ...FONTS.Regular10,
+    ...FONTS.Regular11,
     color: COLORS.red,
   },
 });

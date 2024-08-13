@@ -3,14 +3,14 @@ import {COLORS, FONTS, SIZES} from '../../constant';
 
 const styles = StyleSheet.create({
   input: {
-    ...FONTS.Regular12,
-    color: COLORS.black,
+    ...FONTS.Regular13,
+    color: COLORS.iconColor,
     padding: 0,
-    height: SIZES.padding * 2.1,
-    borderRadius: SIZES.small,
-    backgroundColor: COLORS.background,
+    height: SIZES.padding * 2.3,
+    borderRadius: SIZES.base,
+    backgroundColor: COLORS.transparent,
     paddingHorizontal: SIZES.padding2,
-    borderWidth: 1,
+    borderWidth: 1.5,
     marginVertical: SIZES.small,
   },
   flexView: {
@@ -19,11 +19,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   errorText: {
-    ...FONTS.Regular10,
+    ...FONTS.Regular11,
     color: 'red',
     width: '100%',
   },
-
   errorInput: {
     borderColor: 'red',
     borderWidth: 1,

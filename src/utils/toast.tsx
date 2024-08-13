@@ -24,8 +24,8 @@ const toastConfig = {
       style={[
         styles.container,
         {
-          borderLeftColor: COLORS.olive_green,
-          borderColor: COLORS.olive_green,
+          borderLeftColor: COLORS.oliveGreen,
+          borderColor: COLORS.oliveGreen,
         },
       ]}
       contentContainerStyle={styles.contentContainerStyle}
@@ -70,8 +70,8 @@ const toastConfig = {
       style={[
         styles.container,
         {
-          borderLeftColor: COLORS.secondary_text_color,
-          borderColor: COLORS.secondary_text_color,
+          borderLeftColor: COLORS.textColor,
+          borderColor: COLORS.textColor,
         },
       ]}
       contentContainerStyle={styles.contentContainerStyle}

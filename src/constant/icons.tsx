@@ -5,7 +5,7 @@ const icons = {
     type: 'ant-design',
     name: 'checkcircle',
     size: 28,
-    color: COLORS.olive_green,
+    color: COLORS.oliveGreen,
   },
   errorIcon: {
     type: 'materialIcons',
@@ -40,20 +40,20 @@ const icons = {
   backIcon: {
     type: 'ant-design',
     name: 'arrowleft',
-    size: 30,
+    size: 21,
     color: COLORS.black,
   },
   showPasswordIcon: {
     type: 'ant-design',
     name: 'eye',
     size: 22,
-    color: '#292739',
+    color: COLORS.iconColor,
   },
   hidePasswordIcon: {
     type: 'ionicons',
     name: 'eye-off',
     size: 22,
-    color: '#292739',
+    color: COLORS.iconColor,
   },
 };
 

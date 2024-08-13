@@ -50,11 +50,11 @@ export default function InputField({
             borderColor: hasError
               ? COLORS.red // Change this to your actual error color
               : isFocused
-              ? COLORS.olive_green
+              ? COLORS.oliveGreen
               : COLORS.borderColor,
           },
         ]}
-        placeholderTextColor={COLORS.place_holder_color}
+        placeholderTextColor={COLORS.placeHolderColor}
         defaultValue={defaultValue}
         value={value}
         onFocus={onFocus}

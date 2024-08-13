@@ -36,7 +36,7 @@ export default function ImagePickerModal({
             style={styles.closeButton}
             activeOpacity={0.8}
             onPress={closeModal}>
-            <Icon {...icons.closeIcon} color={COLORS.text_color} />
+            <Icon {...icons.closeIcon} color={COLORS.textColor} />
           </TouchableOpacity>
 
           <View style={styles.row}>

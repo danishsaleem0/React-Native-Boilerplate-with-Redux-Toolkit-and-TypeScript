@@ -6,6 +6,7 @@ import * as Screens from '../../screens';
 export type AuthStackParamList = {
   [NavigationStrings.LOGIN]: undefined;
   [NavigationStrings.SIGN_UP]: undefined;
+  [NavigationStrings.FORGOT_PASSWORD]: undefined;
 };
 
 const AuthStack = createStackNavigator<AuthStackParamList>();
@@ -22,6 +23,10 @@ export default function AuthNavigation() {
       <AuthStack.Screen
         name={NavigationStrings.SIGN_UP}
         component={Screens.Signup}
+      />
+      <AuthStack.Screen
+        name={NavigationStrings.FORGOT_PASSWORD}
+        component={Screens.ForgotPassword}
       />
     </AuthStack.Navigator>
   );

@@ -47,8 +47,8 @@ const IconInputField = ({
             borderColor: hasError
               ? COLORS.red
               : isFocused
-              ? COLORS.olive_green
-              : COLORS.strokeColor,
+              ? COLORS.oliveGreen
+              : COLORS.borderColor,
           },
         ]}>
         {leftIcon && <Icon {...leftIcon} style={styles.icon} />}
@@ -69,7 +69,7 @@ const IconInputField = ({
           placeholder={placeholder}
           secureTextEntry={secureText && hidePassword}
           style={[styles.input, inputStyle]}
-          placeholderTextColor={COLORS.place_holder_color}
+          placeholderTextColor={COLORS.placeHolderColor}
           defaultValue={defaultValue}
           value={value}
           onFocus={onFocus}
@@ -103,18 +103,18 @@ const IconInputField = ({
 const styles = StyleSheet.create({
   errorInput: {
     borderColor: COLORS.red,
-    borderWidth: 1,
+    borderWidth: 1.5,
   },
   main_view: {
     flexWrap: 'wrap',
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: SIZES.padding2,
-    borderRadius: SIZES.medium,
-    height: SIZES.padding * 2.1,
+    borderRadius: SIZES.base,
+    height: SIZES.padding * 2.3,
     marginVertical: SIZES.small,
-    borderWidth: 1,
-    backgroundColor: COLORS.background,
+    borderWidth: 1.5,
+    backgroundColor: COLORS.transparent,
   },
   icon: {
     flex: 1,
@@ -123,14 +123,13 @@ const styles = StyleSheet.create({
 
   input: {
     flex: 1,
-
-    ...FONTS.Regular12,
-    color: COLORS.black,
+    ...FONTS.Regular13,
+    color: COLORS.iconColor,
     padding: 0,
-    height: SIZES.padding * 2.1,
+    height: SIZES.padding * 2.3,
   },
   errorText: {
-    ...FONTS.Regular10,
+    ...FONTS.Regular11,
     color: 'red',
     width: '100%',
   },

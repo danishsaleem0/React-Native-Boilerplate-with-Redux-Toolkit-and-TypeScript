@@ -3,7 +3,7 @@ import {COLORS, FONTS} from '../../constant';
 
 const styles = StyleSheet.create({
   text: {
-    color: COLORS.text_color,
+    color: COLORS.textColor,
     ...FONTS.Regular14,
   },
 });

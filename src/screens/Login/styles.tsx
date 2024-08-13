@@ -2,20 +2,37 @@ import {StyleSheet} from 'react-native';
 import {COLORS, FONTS, SIZES} from '../../constant';
 
 const styles = StyleSheet.create({
-  mediumText25: {
-    color: COLORS.black,
-    ...FONTS.Medium25,
+  logoStyle: {
+    width: '80%',
+    height: undefined,
+    aspectRatio: 130 / 76,
+    resizeMode: 'contain',
+  },
+  headerView: {
+    paddingTop: SIZES.padding * 4,
+    paddingBottom: SIZES.padding * 2,
+  },
+  commonView: {
+    marginVertical: SIZES.small,
+  },
+  fieldName: {
+    color: COLORS.secondary,
+  },
+  forgotButton: {
+    alignSelf: 'flex-end',
+  },
+  mediumText14: {
+    ...FONTS.Medium14,
+    color: COLORS.iconColor,
     paddingVertical: SIZES.padding2,
-    paddingLeft: SIZES.small,
+    textDecorationLine: 'underline',
+    textDecorationColor: COLORS.iconColor,
   },
-  mediumText12: {
-    color: COLORS.black,
-    ...FONTS.Medium12,
+  regularText14: {
+    ...FONTS.Regular14,
   },
-  buttonStyle: {
-    marginTop: SIZES.padding,
-    marginBottom: SIZES.medium,
-  },
+
+  boldText14: {...FONTS.Bold14, color: COLORS.secondary},
 });
 
 export default styles;

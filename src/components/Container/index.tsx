@@ -15,7 +15,7 @@ export default function Container({
     contentContainerStyle: [
       styles.container2,
       style,
-      !isPadding && {paddingHorizontal: 0},
+      !isPadding && {paddingHorizontal: 0, paddingTop: 0},
     ],
   };
 
