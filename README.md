@@ -25,6 +25,7 @@ import {navigationRef} from './NavigationRef';
 import BottomTabStack from '../Tabs/BottomTabStack';
 import useAuthSelector from '../../redux/selectors/useAuthSelector';
 
+```bash
 export type MainNavigatorStackParamList = {
   [NavigationStrings.AUTH_STACK]: undefined;
   [NavigationStrings.MAIN_STACK]: undefined;
@@ -52,7 +53,7 @@ export default function MainNavigator() {
     </NavigationContainer>
   );
 }
-
+```
 This example shows how the app determines the user's login status and directs them either to the authentication flow (AuthStack) or the main app (BottomTabStack).
 
 # Navigation Setup
